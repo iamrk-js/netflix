@@ -6,7 +6,7 @@ import { MovieDetailsComponent } from './shared/components/movie-details/movie-d
 
 const routes: Routes = [
   {path : '', component : HomeComponent},
-  {path : 'searchMovie', component : SearchComponent},
+  {path : 'search', component : SearchComponent},
   {path : 'moviedetails/:id', component : MovieDetailsComponent}
 ];
 

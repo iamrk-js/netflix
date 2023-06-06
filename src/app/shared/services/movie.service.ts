@@ -34,4 +34,7 @@ export class MovieService {
     return this._http.get(`${this.baseurl}/discover/movie?api_key=${this.apikey}&with_genres=28`);
   }
 
+  getMovieDetails(id: number): Observable<any> {
+    return this._http.get(`${this.baseurl}/movie/${id}?api_key=${this.apikey}`)
+  }
 }

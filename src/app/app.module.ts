@@ -10,6 +10,8 @@ import { MovieDetailsComponent } from './shared/components/movie-details/movie-d
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { MaterialModule } from './material/material.module';
     HomeComponent,
     SearchComponent,
     MovieDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    MainSliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

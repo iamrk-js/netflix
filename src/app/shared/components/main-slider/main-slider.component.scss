@@ -1,0 +1,44 @@
+::ng-deep{
+    .mainSlider{
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 100%;
+            height: calc(100vh - 64px);
+            object-fit: cover;
+            cursor: pointer;
+        }
+         .owl-theme .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+         .owl-theme .owl-nav [class*=owl-] {
+            font-size: 42px;
+            background: transparent !important;
+        }
+        .owl-theme .owl-dots, .owl-theme .owl-nav {
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .caption {
+            position: absolute;
+            left: 50px;
+            top: 40%;
+            color: #fff;
+            h3 {
+                text-shadow: 8px 16px 22px black;
+                font-size: 48px !important;
+            }
+        }
+    }
+   
+}
+
+  

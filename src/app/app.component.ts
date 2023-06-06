@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
      .subscribe(
           (res) => {
             console.log(res);
-            this._snackBarService.openSnackbar("Movies fetched Succssefully", "Close")
           }
         )
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Imovie } from '../../modals/movies';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +10,14 @@ import { MovieService } from '../../services/movie.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _movieService : MovieService) { }
+  moviesArray: Array<Imovie> = []
+  constructor(private _movieService: MovieService) { }
 
   ngOnInit(): void {
-    this._movieService.fetchActionMovies()
-      .subscribe(console.log)
+    this._movieService.getTrendingMovies()
+      .subscribe(res => {
+        this.moviesArray = res
+      })
   }
 
 }
