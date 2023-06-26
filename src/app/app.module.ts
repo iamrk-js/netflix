@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
+import { EmbedvideoComponent } from './shared/components/embedvideo/embedvideo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MainSliderComponent } from './shared/components/main-slider/main-slider
     SearchComponent,
     MovieDetailsComponent,
     NavbarComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    EmbedvideoComponent
   ],
   imports: [
     BrowserModule,
