@@ -1,1 +1,3 @@
-<app-main-slider [moviesArray]="moviesArray"></app-main-slider>
+<ng-container *ngIf="moviesArray">
+    <app-main-slider [moviesArray]="moviesArray"></app-main-slider>
+</ng-container>

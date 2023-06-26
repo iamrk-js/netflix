@@ -13,11 +13,11 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit(): void {
-      this._movieService.getTrendingMovies()
-     .subscribe(
-          (res) => {
-            console.log(res);
-          }
-        )
+    //   this._movieService.getTrendingMovies()
+    //  .subscribe(
+    //       (res) => {
+    //         console.log(res);
+    //       }
+    //     )
   }
 }

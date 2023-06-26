@@ -15,9 +15,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this._movieService.getTrendingMovies()
-      .subscribe(res => {
-        this.moviesArray = res
-      })
+      .subscribe(
+        res => {
+          if (Array.isArray(res)) {
+            this.moviesArray = res
+          }
+        }
+      )
   }
 
 }
