@@ -37,4 +37,9 @@ export class MovieService {
   getMovieDetails(id: number): Observable<any> {
     return this._http.get(`${this.baseurl}/movie/${id}?api_key=${this.apikey}`)
   }
+
+  getMovieTrailer(movieId: number) {
+    const youtubeUrl = `${this.baseurl}/movie/${movieId}/videos?api_key=${this.apikey}`;
+    return this._http.get(youtubeUrl)
+  }
 }

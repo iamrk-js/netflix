@@ -32,9 +32,8 @@ export class MainSliderComponent implements OnInit {
         items: 1
       },
       1000: {
-        items: 5,
-        dots:true,
-        margin:10
+        items: 1,
+        dots:true
       }
     },
     nav: true
