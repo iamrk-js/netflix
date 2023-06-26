@@ -40,7 +40,7 @@ export class MovieDetailsComponent implements OnInit {
   runTrailer(id:string){
       console.log(id)
       // window.open(`https://www.youtube.com/watch?v=${id}`)
-     const url = `https://www.youtube.com/watch?v=${id}`
+     const url = `https://www.youtube.com/embed/${id}`
      this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url)
   }
 }

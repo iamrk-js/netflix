@@ -25,7 +25,9 @@
                 <hr>
                 <div class="col-md-8 offset-md-2">
                     <div *ngIf="trailerUrl" class="trailer-container">
-                        <iframe [src]="trailerUrl" allowfullscreen></iframe>
+                        <!-- <iframe [src]="trailerUrl" allowfullscreen></iframe> -->
+
+                        <iframe width="560" height="315" [src]="trailerUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                       </div>
                 </div>
             </div>
