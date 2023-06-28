@@ -15,14 +15,14 @@
       <div class="col-12">
         <section class="trailers">
           <div class="row">
-            <!-- <div
+            <div
               class="col-md-6"
               *ngFor="let m of movietrailers"
               (click)="runTrailer(m.key)"
             >
               {{ m.name }}
-            </div> -->
-            <div class="col-md-12 mb-5">
+            </div>
+            <!-- <div class="col-md-12 mb-5">
                 <mat-tab-group>
                     <mat-tab label="Overview"> 
                         <app-overview [movie]=" movie"></app-overview>
@@ -34,7 +34,7 @@
                         <app-movie-photos></app-movie-photos>
                     </mat-tab>
                   </mat-tab-group>
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
@@ -47,7 +47,7 @@
 
 
 
-<!-- <div *ngIf="trailerUrl" class="trailer-container">
+<div *ngIf="trailerUrl" class="trailer-container">
              
     <button class="close-button" (click)="trailerUrl = ''" mat-raised-button color="primary">Close</button>
     <iframe
@@ -59,4 +59,4 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     ></iframe>
-  </div> -->
+  </div>
