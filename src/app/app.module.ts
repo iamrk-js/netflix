@@ -13,6 +13,8 @@ import { MaterialModule } from './material/material.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './shared/components/main-slider/main-slider.component';
 import { EmbedvideoComponent } from './shared/components/embedvideo/embedvideo.component';
+import { OverviewComponent } from './shared/components/overview/overview.component';
+import { MoviePhotosComponent } from './shared/components/movie-photos/movie-photos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EmbedvideoComponent } from './shared/components/embedvideo/embedvideo.c
     MovieDetailsComponent,
     NavbarComponent,
     MainSliderComponent,
-    EmbedvideoComponent
+    EmbedvideoComponent,
+    OverviewComponent,
+    MoviePhotosComponent
   ],
   imports: [
     BrowserModule,

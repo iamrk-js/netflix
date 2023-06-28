@@ -1,3 +1,11 @@
+.movieDetails{
+  background-color: #333;
+  color: #fff;
+}
+
+ ::ng-deep .mat-tab-label .mat-tab-label-content {
+    color: #fff !important;
+  }
 .banner{
     height: 80vh;
     background-size: cover;

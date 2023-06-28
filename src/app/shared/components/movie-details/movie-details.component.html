@@ -1,4 +1,4 @@
-<div *ngIf="movie">
+<div *ngIf="movie" class="movieDetails">
   <div
     class="banner mb-5"
     [style.backgroundImage]="'url(' + backgroundImage + ')'"
@@ -13,35 +13,27 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <section class="py-5">
-          <p>
-            {{ movie.overview }}
-          </p>
-        </section>
         <section class="trailers">
           <div class="row">
-            <div
+            <!-- <div
               class="col-md-6"
               *ngFor="let m of movietrailers"
               (click)="runTrailer(m.key)"
             >
               {{ m.name }}
-            </div>
-            <hr />
-            <div class="col-md-8 offset-md-2">
-              <div *ngIf="trailerUrl" class="trailer-container">
-                <!-- <iframe [src]="trailerUrl" allowfullscreen></iframe> -->
-                <button class="close-button" (click)="trailerUrl = ''" mat-raised-button color="primary">Close</button>
-                <iframe
-                  width="560"
-                  height="315"
-                  [src]="trailerUrl"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
+            </div> -->
+            <div class="col-md-12 mb-5">
+                <mat-tab-group>
+                    <mat-tab label="Overview"> 
+                        <app-overview [movie]=" movie"></app-overview>
+                    </mat-tab>
+                    <mat-tab label="Videos"> 
+                        <app-embedvideo></app-embedvideo>
+                    </mat-tab>
+                    <mat-tab label="Photos"> 
+                        <app-movie-photos></app-movie-photos>
+                    </mat-tab>
+                  </mat-tab-group>
             </div>
           </div>
         </section>
@@ -52,3 +44,19 @@
     {{movie | json}}
 </p> -->
 </div>
+
+
+
+<!-- <div *ngIf="trailerUrl" class="trailer-container">
+             
+    <button class="close-button" (click)="trailerUrl = ''" mat-raised-button color="primary">Close</button>
+    <iframe
+      width="560"
+      height="315"
+      [src]="trailerUrl"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div> -->
