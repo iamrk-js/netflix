@@ -15,6 +15,7 @@ import { MainSliderComponent } from './shared/components/main-slider/main-slider
 import { EmbedvideoComponent } from './shared/components/embedvideo/embedvideo.component';
 import { OverviewComponent } from './shared/components/overview/overview.component';
 import { MoviePhotosComponent } from './shared/components/movie-photos/movie-photos.component';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MoviePhotosComponent } from './shared/components/movie-photos/movie-pho
     MainSliderComponent,
     EmbedvideoComponent,
     OverviewComponent,
-    MoviePhotosComponent
+    MoviePhotosComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

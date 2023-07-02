@@ -1,7 +1,9 @@
 <div *ngIf="movie" class="movieDetails">
   <div
     class="banner mb-5"
-    [style.backgroundImage]="'url(' + backgroundImage + ')'"
+    [style.backgroundImage]="
+      'linear-gradient(90deg, black, transparent),url(' + backgroundImage + ')'
+    "
   >
     <div class="caption">
       <h2 class="display-3">
@@ -15,26 +17,36 @@
       <div class="col-12">
         <section class="trailers">
           <div class="row">
-            <div
+            <!-- <div
               class="col-md-6"
               *ngFor="let m of movietrailers"
               (click)="runTrailer(m.key)"
             >
               {{ m.name }}
-            </div>
-            <!-- <div class="col-md-12 mb-5">
-                <mat-tab-group>
-                    <mat-tab label="Overview"> 
-                        <app-overview [movie]=" movie"></app-overview>
-                    </mat-tab>
-                    <mat-tab label="Videos"> 
-                        <app-embedvideo></app-embedvideo>
-                    </mat-tab>
-                    <mat-tab label="Photos"> 
-                        <app-movie-photos></app-movie-photos>
-                    </mat-tab>
-                  </mat-tab-group>
             </div> -->
+            <div class="col-md-12 mb-5">
+              <mat-tab-group>
+                <mat-tab label="Overview">
+                  <app-overview [movie]="movie"></app-overview>
+                </mat-tab>
+                <mat-tab label="Videos">
+                 <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 mb-4" *ngFor="let movie of movietrailers">
+                     <div class="card">
+                      <div class="card-body">
+                        <app-embedvideo [key]="movie.key"></app-embedvideo>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                 </div>
+                </mat-tab>
+                <mat-tab label="Photos">
+                  <app-movie-photos></app-movie-photos>
+                </mat-tab>
+              </mat-tab-group>
+            </div>
           </div>
         </section>
       </div>
@@ -45,9 +57,7 @@
 </p> -->
 </div>
 
-
-
-<div *ngIf="trailerUrl" class="trailer-container">
+<!-- <div *ngIf="trailerUrl" class="trailer-container">
              
     <button class="close-button" (click)="trailerUrl = ''" mat-raised-button color="primary">Close</button>
     <iframe
@@ -59,4 +69,4 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     ></iframe>
-  </div>
+  </div> -->
