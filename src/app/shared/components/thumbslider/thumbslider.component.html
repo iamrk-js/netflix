@@ -1,0 +1,23 @@
+<div class="thumbSlider my-5">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of moviesArray">
+      <ng-template carouselSlide>
+        <div class="item animate__fadeIn">
+          <img
+            class=""
+            src="https://image.tmdb.org/t/p/original/{{ slide.backdrop_path }}"
+          />
+          <div class="caption">
+            <h3>{{ slide.original_title }}</h3>
+            <button
+              [routerLink]="['/moviedetails', slide.id]"
+              class="btn btn-warning btn-small" 
+            >
+              Watch Now
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
